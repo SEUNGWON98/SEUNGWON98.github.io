@@ -2,16 +2,41 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.login {
+.login_form {
   display: flex;
   flex-direction: column;
+  background-color: skyblue;
+  padding: 40px 40px 40px 40px;
+  border-radius: 10%;
+}
+
+.form_title {
+  display: flex;
+  justify-content: center;
+}
+
+.input_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  height: 50px;
+  border: none;
+}
+
+.warning {
+  display: flex;
+  justify-content: center;
 }
 
 .clock {
   width: 200px;
-  /* display: flex; */
+  display: flex;
   display: none;
   flex-direction: column;
   align-items: center;
@@ -19,4 +44,8 @@ body {
 
 .hours {
   font-size: 30px;
+}
+
+.hidden {
+  display: none;
 }

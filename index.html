@@ -8,12 +8,23 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="clock"></div>
-    <form class="login">
-      <input type="id" />
-      <input type="password" />
+    <div class="clock hidden"></div>
+    <form class="login_form">
+      <h1 class="form_title">Seo's App</h1>
+      <div class="input_title">
+        <div>ID</div>
+        <input class="login_form_id" type="id" />
+      </div>
+      <div class="input_title">
+        <div>Password</div>
+        <input type="password" />
+      </div>
+      <br />
+      <div class="warning hidden"><p>값을 입력해주세요</p></div>
+      <br />
       <button>로그인</button>
     </form>
+    <h1 class="hidden" id="greeting"></h1>
   </body>
   <script src="./index.js"></script>
 </html>
