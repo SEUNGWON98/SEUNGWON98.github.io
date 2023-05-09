@@ -15,6 +15,37 @@ const clock = document.querySelector(".clock");
 
 main.classList.add(HIDDEN_CLASSNAME);
 
+const todolist = document.querySelector(".todolist");
+const todolist_input = document.querySelector(".todolist_input");
+const lists = document.querySelector("ul");
+let todos = [];
+
+function addTodo() {
+  event.preventDefault();
+  const todo = todolist_input.value;
+  if (todo) {
+    const li = document.createElement("li");
+    li.innerText = todo;
+    lists.appendChild(li);
+    todos.push(todo);
+    localStorage.setItem("todos", JSON.stringify(todos));
+    todolist_input = "";
+  }
+}
+todolist.addEventListener("submit", addTodo);
+
+function loadTodos() {
+  const savedTodos = localStorage.getItem("todos");
+  if (savedTodos) {
+    todos = JSON.parse(savedTodos);
+    todos.forEach((todo) => {
+      const li = document.createElement("li");
+      li.innerText = todo;
+      lists.appendChild(li);
+    });
+  }
+}
+
 function Clock() {
   const today = new Date();
   const month = today.toLocaleString("en-US", { month: "short" });
@@ -51,5 +82,7 @@ console.log(savedUsername);
 
 // loginForm.addEventListener("submit", Clock);
 loginForm.addEventListener("submit", onLoginSubmit);
+
+loadTodos();
 
 setInterval(Clock, 1000);

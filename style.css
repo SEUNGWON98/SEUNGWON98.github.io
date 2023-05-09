@@ -59,3 +59,11 @@ button {
 .hidden {
   display: none;
 }
+
+#greeting {
+  padding-top: 20px;
+}
+
+.todolist_title {
+  padding-top: 30px;
+}
