@@ -64,7 +64,7 @@ function Clock() {
   const minute = today.getMinutes();
   const minutes = minute < 10 ? "0" + minute : minute.toString();
 
-  clock.innerHTML = `${month} ${date} <br/> <strong class="hours"> ${hour}: ${minutes} <strong/> `;
+  clock.innerHTML = `<div class = "date">${month} ${date}</div> <strong class="hours"> ${hour}: ${minutes} <strong/> `;
   // clock.classList.remove(HIDDEN_CLASSNAME);
 }
 
@@ -80,7 +80,7 @@ function onLoginSubmit(event) {
 
     loginForm.classList.add(HIDDEN_CLASSNAME);
 
-    greeting.innerHTML = `환영합니다! ${loginId} 님`;
+    greeting.innerHTML = `Welcome! <br/>${loginId}!!`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
     Clock();
     setBackground();
@@ -108,8 +108,8 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const weather = document.querySelector("#weather span:first-child");
-      const city = document.querySelector("#weather span:last-child");
+      const weather = document.querySelector("#weather strong:first-child");
+      const city = document.querySelector("#weather strong:last-child");
       city.innerHTML = data.name;
       weather.innerHTML = `${data.weather[0].main} / ${data.main.temp}`;
     });

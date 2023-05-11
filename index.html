@@ -6,40 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
     <div class="main">
-      <div class="clock hidden"></div>
-      <h1 class="hidden" id="greeting"></h1>
-      <div id="weather">
-        <span></span>
-        <span></span>
+      <div class="main_first">
+        <h1 class="hidden" id="greeting"></h1>
+
+        <h1 class="main_first_title">Seostagram</h1>
+
+        <div class="hello">
+          <div class="clock hidden"></div>
+
+          <div id="weather">
+            <strong></strong>
+            <strong></strong>
+          </div>
+        </div>
       </div>
-      <h1 class="todolist_title">오늘 해야하는 일!</h1>
-      <form class="todolist">
-        <input
-          class="todolist_input"
-          type="text"
-          placeholder="할 일을 입력하세요."
-        />
-        <button class="todolist_button" type="submit">할 일 추가</button>
-      </form>
-      <ul></ul>
+
+      <h1 class="todolist_title">To do List!!</h1>
+      <div>
+        <form class="todolist">
+          <input
+            class="todolist_input"
+            type="text"
+            placeholder="할 일을 입력하세요."
+          />
+          <button class="todolist_button" type="submit">추가</button>
+        </form>
+        <ul></ul>
+      </div>
     </div>
     <form class="login_form">
-      <h1 class="form_title">Seo's App</h1>
+      <h1 class="form_title">Seostagram</h1>
       <div class="input_title">
-        <div>ID</div>
-        <input class="login_form_id" type="id" />
-      </div>
-      <div class="input_title">
-        <div>Password</div>
-        <input type="password" />
+        <input class="login_form_id" type="id" placeholder=" ID" />
+        <input type="password" placeholder=" Password" />
       </div>
       <br />
       <div class="warning hidden"><p>값을 입력해주세요</p></div>
       <br />
-      <button>로그인</button>
+      <button class="loginform_button">
+        <strong class="button_name">로그인</strong>
+      </button>
     </form>
   </body>
   <script src="./index.js"></script>
